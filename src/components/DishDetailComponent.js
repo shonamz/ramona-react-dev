@@ -8,6 +8,15 @@ import { Control, LocalForm} from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import dotenv from  'dotenv'
+
+
+require('dotenv').config()
+ //console.log(process.env) 
+
+ const config = dotenv.parse(process.env ) // will return an object
+ console.log(typeof config) // object { BASIC : 'basic' }
+ console.log(JSON.stringify(config))
 
 
     function RenderDish({dish, favorite, postFavorite}) {
@@ -18,7 +27,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
                             exitTransform: 'scale(0.5) translateY(-50%)'
                         }}>
                         <Card>
-                            <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                            <CardImg top src={process.env.config + dish.image} alt={dish.name} />
                             <CardImgOverlay>
                                 <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>
                                     {favorite ?

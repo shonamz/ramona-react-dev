@@ -8,19 +8,15 @@ import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import dotenv from  'dotenv'
-<<<<<<< HEAD
 require('dotenv').config()
-=======
+ 
 
+  //console.log(process.env) 
 
-require('dotenv').config()
- //console.log(process.env) 
-
- const config = dotenv.parse(process.env ) // will return an object
- console.log(typeof config) // object { BASIC : 'basic' }
- console.log(JSON.stringify(config))
->>>>>>> 04c63d9291899ac10e7eb7d6433604c906259946
-
+//  const config = dotenv.parse(process.env ) // will return an object
+//  console.log(typeof config) // object { BASIC : 'basic' }
+//  console.log(JSON.stringify(config))
+ 
 
     function RenderDish({dish, favorite, postFavorite}) {
             return(

@@ -10,12 +10,7 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import dotenv from  'dotenv'
 require('dotenv').config()
  
-
-  //console.log(process.env) 
-
-//  const config = dotenv.parse(process.env ) // will return an object
-//  console.log(typeof config) // object { BASIC : 'basic' }
-//  console.log(JSON.stringify(config))
+ 
  
 
     function RenderDish({dish, favorite, postFavorite}) {
@@ -26,11 +21,8 @@ require('dotenv').config()
                             exitTransform: 'scale(0.5) translateY(-50%)'
                         }}>
                         <Card>
-<<<<<<< HEAD
                             <CardImg top src={process.env.REACT_APP_BASE_URL + dish.image} alt={dish.name} />
-=======
                             <CardImg top src={process.env.config + dish.image} alt={dish.name} />
->>>>>>> 04c63d9291899ac10e7eb7d6433604c906259946
                             <CardImgOverlay>
                                 <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>
                                     {favorite ?

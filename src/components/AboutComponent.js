@@ -139,7 +139,7 @@ function RenderLeader({leader}) {
     return(
         <Media tag="li">
             <Media left middle>
-                <Media object src={process.env.REACT_APP_BASE_URL + leader.image} alt={leader.name} />
+                <Media object src={process.env.REACT_APP_SERVER_URL + leader.image} alt={leader.name} />
             </Media>
             <Media body className="ml-5">
                 <Media heading>{leader.name}</Media>

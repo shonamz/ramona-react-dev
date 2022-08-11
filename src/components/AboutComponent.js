@@ -6,15 +6,13 @@ import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { Fade, Stagger } from 'react-animation-components';
-import dotenv from  'dotenv'
-require('dotenv').config()
-
+  
 
 function RenderLeader({leader}) {
     return(
         <Media tag="li">
             <Media left middle>
-                <Media object src={process.env.REACT_APP_SERVER_URL + leader.image} alt={leader.name} />
+                <Media object src={process.env.baseUrl+ leader.image} alt={leader.name} />
             </Media>
             <Media body className="ml-5">
                 <Media heading>{leader.name}</Media>

@@ -7,9 +7,7 @@ import { Control, LocalForm} from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
-import dotenv from  'dotenv'
-require('dotenv').config()
- 
+  
  
  
 
@@ -21,7 +19,7 @@ require('dotenv').config()
                             exitTransform: 'scale(0.5) translateY(-50%)'
                         }}>
                         <Card>
-                            <CardImg top src={process.env.REACT_APP_SERVER_URL + dish.image} alt={dish.name} />
+                            <CardImg top src={process.env.baseUrl+ dish.image} alt={dish.name} />
                             <CardImg top src={process.env.config + dish.image} alt={dish.name} />
                             <CardImgOverlay>
                                 <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>

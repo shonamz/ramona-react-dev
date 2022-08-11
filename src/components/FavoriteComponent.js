@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { baseUrl } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
 import dotenv from  'dotenv'
-require('dotenv').config()
+// require('dotenv').config()
 
 function RenderMenuItem({ dish, deleteFavorite }) {
     return(
         <Media tag="li">
             <Media left middle>
-                <Media object src={process.env.REACT_APP_SERVER_URL + dish.image} alt={dish.name} />
+                <Media object src={process.env.baseUrl + dish.image} alt={dish.name} />
             </Media>
             <Media body className="ml-5">
                 <Media heading>{dish.name}</Media>
